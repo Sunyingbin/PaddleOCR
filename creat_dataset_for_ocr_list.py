@@ -1,7 +1,7 @@
 import os
 import json
 
-url = 'C:\\Users\\18505\\Desktop\\电表\\output_meter'
+url = 'C:\\Users\\18505\\Desktop\\电表\\小表盘\\little_meter'
 
 trainTxt = url+'//train.txt'
 trainFile = open(trainTxt, 'w')
