@@ -12,13 +12,13 @@ def cv2_to_base64(image):
 
 # 发送HTTP请求
 
-data = {'images':[cv2_to_base64(cv2.imread("20200525141721.png"))]}
+data = {'images':[cv2_to_base64(cv2.imread("20200629172851.jpg"))]}
 headers = {"Content-type": "application/json"}
-url = "http://127.0.0.1:8877/predict/chinese_ocr_db_crnn_mobile"
+url = "http://127.0.0.1:8866/predict/yejing_ocr_db_crnn_mobile"
 r = requests.post(url=url, headers=headers, data=json.dumps(data))
 
 # 图片展示
-img = mpimg.imread("20200525141721.png")
+img = mpimg.imread("20200629172851.jpg")
 plt.figure(figsize=(10,10))
 plt.imshow(img)
 plt.axis('off')

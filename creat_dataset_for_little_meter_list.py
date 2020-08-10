@@ -1,7 +1,7 @@
 import os
 import json
 
-url = 'C:\\Users\\18505\\Desktop\\电表\\小表盘\\images'
+url = 'C:\\Users\\18505\\Desktop\\电表\\yejing\\images'
 
 trainTxt = url+'//train.txt'
 trainFile = open(trainTxt, 'w')
@@ -29,7 +29,7 @@ for j in os.listdir(trainUrl):
                 }
                 transcriptionList.append(obj)
 
-            imgUrl = 'train/' + str(j.split('.json')[0]) + '.png'
+            imgUrl = 'train/' + str(j.split('.json')[0]) + '.jpg'
             content = imgUrl +'\t'+str(transcriptionList)
             print(content)
             trainFile.write(content.replace("'", '"')+'\n')
@@ -61,7 +61,7 @@ for j in os.listdir(testUrl):
                 }
                 transcriptionList.append(obj)
 
-            imgUrl = 'test/' + str(j.split('.json')[0]) + '.png'
+            imgUrl = 'test/' + str(j.split('.json')[0]) + '.jpg'
             content = imgUrl +'\t'+str(transcriptionList)
             print(content)
             testFile.write(content.replace("'", '"')+'\n')
